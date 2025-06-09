@@ -16,12 +16,12 @@ pkg load communications;
 %% Cockpit of the simulator
 
 SF = 7:1:12;                 % Spreading Factor from 7 to 12
-BW = 125000;                 % 125kHz
-Fs = 125000;                 % Sampling Frequency
+BW = 500e3;                 % 125kHz
+Fs = 500e3;                 % Sampling Frequency
 preamble_len = 8;            % Preamble length
 sync_len = 2;                % Sync length
 total_bits = 27720;          % total bits to be transmitted in LoRa message
-SNR_dB = -40:1:00;           % SNR in DB
+SNR_dB = -30:1:00;           % SNR in DB
 SNR = 10.^(SNR_dB/10);       % SNR
 Total_iterations = 100;
 BER = zeros(Total_iterations,length(SNR_dB));
